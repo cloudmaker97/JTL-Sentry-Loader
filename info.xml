@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jtlshopplugin>
-    <Name>Vorlage eines Plugins</Name>
-    <Description>Hier könnte Ihre Beschreibung stehen.</Description>
+    <Name>Sentry-SDK Loader</Name>
+    <Description>Automatische Fehlerübermittlung zur Nachverfolgung.</Description>
     <Author>Dennis Heinrich</Author>
     <URL>https://dennis-heinri.ch</URL>
-    <PluginID>plugin_test</PluginID>
+    <PluginID>dh_sentry_loader</PluginID>
     <XMLVersion>100</XMLVersion>
     <Icon></Icon>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <ShopVersion>5.0.0</ShopVersion>
-    <CreateDate>2023-02-01</CreateDate>
+    <CreateDate>2024-05-07</CreateDate>
     <Install>
-        <JS>
-            <file>
-                <name>main.js</name>
-                <priority>1</priority>
-                <position>head</position>
-            </file>
-        </JS>
+        <Adminmenu>
+            <Settingslink sort="2">
+                <Name>Einstellungen</Name>
+                <Setting type="text" initialValue="" sort="4" conf="Y">
+                    <Name>Sentry-DSN</Name>
+                    <Description>Die URL zur Sentry DSN</Description>
+                    <ValueName>sentry_sdk_dsn</ValueName>
+                </Setting>
+            </Settingslink>
+        </Adminmenu>
     </Install>
 </jtlshopplugin>
